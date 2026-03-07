@@ -120,7 +120,7 @@ $scope.loginData = $localStorage.getObject('userinfo','{}');
             };
         }])
 
-        .controller('ContactController', ['$scope', function($scope) {
+        .controller('ContactController', ['$scope', '$window', function($scope, $window) {
 
             $scope.feedback = {mychannel:"", firstName:"", lastName:"", agree:false, email:"" };
             
@@ -128,6 +128,14 @@ $scope.loginData = $localStorage.getObject('userinfo','{}');
             
             $scope.channels = channels;
             $scope.invalidChannelSelection = false;
+
+            $scope.callUs = function () {
+                $window.location.href = 'tel:+18655565257';
+            };
+
+            $scope.emailUs = function () {
+                $window.location.href = 'mailto:meghabghagv@roanestate.edu';
+            };
                         
         }])
 
