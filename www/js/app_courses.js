@@ -103,7 +103,8 @@ angular.module('CITC', ['ionic', 'CITC.controllers','CITC.services'])
       url: '/contactus',
       views: {
         'mainContent': {
-          templateUrl: 'templates/contactus.html'
+          templateUrl: 'templates/contactus.html',
+          controller: 'ContactController'
         }
       }
     })
