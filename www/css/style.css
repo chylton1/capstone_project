@@ -1,0 +1,29 @@
+.popover {
+  height: auto !important;
+}
+.popover ion-header-bar {
+  position: relative;
+}
+.popover ion-content {
+  top: 0;
+  position: relative;
+}
+.popover-inner-content {
+  width: 100%;
+  padding: 5px 20px;
+}
+
+#bg {
+    border: solid; 
+    border-width: 5px;
+    border-radius: 10px;
+    border-color: #886aea;
+    background-color: #886aea;
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+
