@@ -85,10 +85,18 @@ angular.module('CITC.services', ['ngResource'])
 }])
 ;
 
-function  changeColor(){
+function changeColor() {
+  var styleId = 'citc-bg-toggle-style';
+  var existingStyle = document.getElementById(styleId);
+
+  if (existingStyle) {
+    existingStyle.parentNode.removeChild(existingStyle);
+    return;
+  }
+
   var style = document.createElement('style');
-  style.innerHTML = `.pane,.view {
-    background-color: #d7cbff;}`;
+  style.id = styleId;
+  style.innerHTML = '.pane,.view { background-color: #d7cbff; }';
   document.head.appendChild(style);
 }
 
