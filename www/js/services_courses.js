@@ -2,10 +2,10 @@
 
 angular.module('CITC.services', ['ngResource'])
 // .constant("baseURL","http://localhost:3000/")
-.constant("baseURL","http://10.0.2.2:3000/")
+.constant("baseURL","http://10.0.2.2:3000/") // IP address for the emulator
 //.constant("baseURL","http://169.254.234.127:3000/")
 //.constant("baseURL","http://192.168.0.76:3000/")
-// .constant("baseURL","http://10.0.1.13:3000/")
+// .constant("baseURL","http://10.0.1.13:3000/") My local IP address
 .factory('menuFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
 
             return $resource(baseURL + "courses/:id", null, {
@@ -97,7 +97,7 @@ function changeColor() {
 
   var style = document.createElement('style');
   style.id = styleId;
-  style.innerHTML = '.pane,.view { background-color: #d7cbff; }';
+  style.innerHTML = '.pane,.view { background-color: rgb(109, 92, 167); }';
   document.head.appendChild(style);
 }
 
